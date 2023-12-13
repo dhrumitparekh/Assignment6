@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lego Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .dropdown-content {
+            display: none;
+        }
+
+        .group:focus-within .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-800 text-white font-sans">
+
+    <div class="bg-gray-900">
+        <nav class="container mx-auto flex items-center justify-between px-4 py-6">
+            <a href="/" class="text-2xl font-bold">Lego Collection</a>
+
+            <div class="flex items-center space-x-4">
+                <button tabindex="0" class="sm:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+
+                <ul class="hidden sm:flex space-x-4">
+                    <li><a href="/lego/sets" class="hover:text-gray-300">View Collection</a></li>
+                    <li><a href="/lego/addSet" class="hover:text-gray-300">Add To Collection</a></li>
+                    <li><a href="/userHistory" class="hover:text-gray-300">User History</a></li>
+                    <li><a href="/about" class="hover:text-gray-300">About</a></li>
+                </ul>
+
+                <div class="relative group">
+                    <button class="focus:outline-none hover:text-gray-300">Account</button>
+                    <ul class="absolute hidden right-0 mt-2 py-2 bg-gray-900 text-white rounded shadow-lg dropdown-content">
+                        <li><a href="/login" class="block px-4 py-2 hover:bg-gray-800">Login</a></li>
+                        <li><a href="/register" class="block px-4 py-2 hover:bg-gray-800">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</body>
+
+</html>

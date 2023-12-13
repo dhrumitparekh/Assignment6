@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="valentine">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>User History</title>
+</head>
+
+<body tabindex="-1">
+    <%- include('partials/navbar', {page: '' }) %>
+        <div class="px-3">
+            <div class="hero bg-base-200 rounded-lg p-6">
+                <div class="hero-content text-center ">
+                    <div class="max-w-md">
+                        <h1 class="text-5xl">
+                            <%= user.userName %>
+                        </h1>
+                        <p class="mt-2">User history: <%= user.email %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <table class="min-w-full border border-gray-300">
+                <thead>
+                    <tr>
+                        <th class="border p-2">Login Date/Time</th>
+                        <th class="border p-2">User Agent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% user.loginHistory.forEach((login)=> { %>
+                        <tr>
+                            <td class="border p-2">
+                                <%= login.dateTime %>
+                            </td>
+                            <td class="border p-2">
+                                <%= login.userAgent %>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="valentine">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Register</title>
+    <style>
+        input {
+            height: 35px;
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body tabindex="-1">
+    <%- include('partials/navbar', {page: '' }) %>
+        <% if (errorMessage) { %>
+            <div class="alert alert-error" role="alert">
+                <span>
+                    <%= errorMessage %>
+                </span>
+            </div>
+            <% } %>
+                <div class="px-3">
+                    <div class="hero bg-base-200 rounded-lg p-6">
+                        <div class="hero-content text-center ">
+                            <div class="max-w-md">
+                                <h1 class="text-5xl">Register</h1>
+                                <p class="mt-2">Please provide your credentials below</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="/register" method="POST">
+                        <div class="mb-4">
+                            <label for="name" class="block font-bold mb-2">User Name</label>
+                            <input type="text" id="userName" name="userName" required
+                                class="form-input w-full rounded border p-3 h-10 focus:outline-none focus:ring focus:border-blue-300">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="img_url" class="block font-bold mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required
+                                class="form-input w-full rounded border p-3 h-10 focus:outline-none focus:ring focus:border-blue-300">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="year" class="block font-bold mb-2">Password</label>
+                            <input type="password" id="password1" name="password1" required
+                                class="form-input w-full rounded border p-3 h-10 focus:outline-none focus:ring focus:border-blue-300">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="num_parts" class="block font-bold mb-2">Confirm Password</label>
+                            <input type="password" id="password2" name="password2" required
+                                class="form-input w-full rounded border p-3 h-10 focus:outline-none focus:ring focus:border-blue-300">
+                        </div>
+
+
+                        <div class="flex items-center justify-between gap-4">
+                            <button type="submit" class="btn btn-success">Register</button>
+                        </div>
+
+
+                    </form>
+                </div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="valentine">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Login</title>
+    <style>
+        input {
+            height: 35px;
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body tabindex="-1">
+    <%- include('partials/navbar', {page: '' }) %>
+        <% if (errorMessage) { %>
+            <div class="alert alert-error" role="alert">
+                <span>
+                    <%= errorMessage %>
+                </span>
+            </div>
+            <% } %>
+                <div class="px-3">
+                    <div class="hero bg-base-200 rounded-lg p-6">
+                        <div class="hero-content text-center ">
+                            <div class="max-w-md">
+                                <h1 class="text-5xl">Login</h1>
+                                <p class="mt-2">Please provide your credentials below</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="/login" method="POST">
+                        <div class="mb-4">
+                            <label for="name" class="block font-bold mb-2">User Name</label>
+                            <input type="text" id="userName" name="userName" required
+                                class="form-input w-full rounded border p-3 h-10">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="year" class="block font-bold mb-2">Password</label>
+                            <input type="password" id="password" name="password" required
+                                class="form-input w-full rounded border p-3 h-10">
+                        </div>
+
+
+                        <div class="flex items-center justify-between gap-4">
+                            <button type="submit" class="btn btn-success">Login</button>
+                        </div>
+
+
+                    </form>
+                </div>
+</body>
+
+</html>
