@@ -30,14 +30,14 @@
 
       <div style="padding: 15px; flex-grow: 1;">
         <h3 style="margin-top: 0; color: #010001"><%= set.name %></h3>
-       <p style="margin: 5px 0; color: black;"><strong style="color: #010001;">Set Type:</strong> <%= set.set_type %></p>
+       <p style="margin: 5px 0; color: #010001"><strong style="color: #010001;">Set Type:</strong> <%= set.set_type %></p>
         <button onclick="location.href='/lego/sets?theme=<%= set.Theme.name %>'" style="background-color: #2196F3; color: white; border: none; border-radius: 5px; padding: 6px 12px; margin-right: 10px; cursor: pointer;"><%= set.Theme.name %></button>
       </div>
 
 
       <div style="padding: 15px; flex-grow: 1;">
-        <p style="margin: 5px 0;"><strong style="color: #010001">Year Released:</strong> <%= set.year %></p>
-        <p style="margin: 5px 0;"><strong style="color: #010001">Number of Parts:</strong> <%= set.num_parts %></p>
+        <p style="margin: 5px 0;color: #010001"><strong style="color: #010001">Year Released:</strong> <%= set.year %></p>
+        <p style="margin: 5px 0;color: #010001"><strong style="color: #010001">Number of Parts:</strong> <%= set.num_parts %></p>
       </div>
 
      <div style="padding: 15px;">
